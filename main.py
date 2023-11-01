@@ -17,14 +17,6 @@ def encode_password(user_password):
     return encoded_password
 
 
-def decode_password(encoded):
-    OG_password = ""
-    for digit in str(encoded):
-        # subtract 3 from the digit
-        password_digit = str((int(digit) - 3) % 10)  #modulo division is still needed so the returned pasword will not be negative
-        # add the new digit into the new decoded password
-        OG_password += password_digit
-    return OG_password
 
 
 def menu():
