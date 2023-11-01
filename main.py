@@ -16,7 +16,12 @@ def encode_password(user_password):
         encoded_password += encoded_digit
     return encoded_password
 
-
+def decode_password(encoded):
+    password = ""
+    for num in str(encoded):
+        new_num = str((int(num) - 3) % 10)
+        password += new_num
+    return password
 
 
 def menu():
